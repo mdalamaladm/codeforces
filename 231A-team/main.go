@@ -16,7 +16,7 @@ func main() {
   var output int
   
   fmt.Fscan(reader, &total)
-  
+
   // Logic here
   for i := 0; i < total; i++ {
     var certain string
@@ -27,7 +27,6 @@ func main() {
       
       // Skip if totalCertain already 2 before j = 2
       if totalCertain > 1 {
-         fmt.Fscan(reader, &certain)
          break
       }
      
