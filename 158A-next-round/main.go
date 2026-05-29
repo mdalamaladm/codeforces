@@ -30,12 +30,17 @@ func main() {
     
     fmt.Fscan(reader, &score)
     
-    if i < target {
+    if i < target && score > 0 {
       output++
     } else if i == target {
+      if score < 1 {
+        break
+      }
+      
       output++
+      
       targetScore = score
-    } else if score >= targetScore {
+    } else if i > target && score >= targetScore {
       output++
     } else {
       break
